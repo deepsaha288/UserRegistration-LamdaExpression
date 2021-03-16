@@ -59,5 +59,18 @@ public class UserRegisterationTest {
         Assertions.assertFalse(result);
 
    }
+   @Test
+    public void Password_validation_True() {
 
+        boolean result = user.checkPassword.validate("Deep@123");
+        Assertions.assertTrue(result);
+
+    }
+    @Test
+    public void Password_validation_False() {
+
+        boolean result = user.checkPassword.validate("Deep123#78");
+        Assertions.assertTrue(result);
+
+    }
 }
