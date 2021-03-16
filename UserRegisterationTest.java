@@ -35,8 +35,7 @@ public class UserRegisterationTest {
         boolean result = user.checkEmail.validate("deepsaha9@gmail.com");
         Assertions.assertTrue(result);
 
-
-    }
+     }
     @Test
     public void Email_checkValidation_False(){
 
@@ -45,4 +44,20 @@ public class UserRegisterationTest {
 
 
     }
+   @Test
+    public void MobileNumber_validation_True() {
+
+        boolean result = user.checkMobileNum.validate("91 9916522077");
+        Assertions.assertTrue(result);
+
+
+    }
+    @Test
+    public void MobileNumber_validation_False() {
+
+        boolean result = user.checkMobileNum.validate("123456789666");
+        Assertions.assertFalse(result);
+
+   }
+
 }
