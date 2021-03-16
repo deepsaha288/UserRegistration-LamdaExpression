@@ -29,4 +29,20 @@ public class UserRegisterationTest {
         Assertions.assertTrue(result);
 
     }
+   @Test
+    public void Email_checkValidation_True(){
+
+        boolean result = user.checkEmail.validate("deepsaha9@gmail.com");
+        Assertions.assertTrue(result);
+
+
+    }
+    @Test
+    public void Email_checkValidation_False(){
+
+        boolean result = user.checkEmail.validate("deepsaha9@123gmail.com");
+        Assertions.assertTrue(result);
+
+
+    }
 }
