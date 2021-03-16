@@ -16,17 +16,17 @@ public class UserRegisterationTest {
 
     }
 
+ @Test
+    public void lastName_checkValidation_ture() {
+        boolean result = user.checkLastName.validate("Saha");
+        Assertions.assertTrue(result);
+
+
+    }
     @Test
-    public void firstName_checkValidation_ture() {
-        boolean result = user.checkFirstName.validate("Deep");
+    public void lastName_CheckValidation_false(){
+        boolean result = user.checkLastName.validate("Sha");
         Assertions.assertTrue(result);
 
     }
-
-    @Test
-    public void firstName_checkValidate_false() {
-        boolean result = user.checkLastName.validate("Dee123");
-        Assertions.assertFalse(result);
-    }
-
 }
